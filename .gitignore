@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 ml-zoomcamp/week-1/housing.csv
 .DS_Store
+ml-zoomcamp/reference/machine-learning-zoomcamp
