@@ -4,8 +4,13 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
+# Q1 What version of pandas are you running
+pd.__version__
+
 # %%
 df = pd.read_csv("./housing.csv")
+
 
 # %%
 # Question 2:
@@ -21,9 +26,6 @@ print(f"There are missing values in the column(s): {df.columns[df.isna().any()].
 print(f"There are {df.ocean_proximity.nunique()} unique values in the `ocean_proximity` column.")
 # %%
 # Question 5: What's the average value of the median_house_value for the houses located near the bay?
-
-#%%
-df.head()
 # %%
 print(f"The average value of `median_house_value` for houses near the bay is {np.mean(df[df.ocean_proximity=='NEAR BAY']['median_house_value']):.0f}")
 # %%
@@ -66,17 +68,8 @@ matrix_prod = X.T@X
 #Create an array y with values [950, 1300, 800, 1000, 1300].
 y = np.array([950, 1300, 800, 1000, 1300])
 #Multiply the inverse of XTX with the transpose of X, and then multiply the result by y. Call the result w.
-w = np.linalg.inv(matrix_prod)@y
+X_inter = np.linalg.inv(matrix_prod)@X.T
+w = X_inter@y
 #What's the value of the last element of w?
-# w[-1]
+print(f"The last element of the array w is: {w[-1]}")
 #%% 
-y
-
-# %%
-df.head()
-# %%
-a = np.ones([9, 5, 7, 4])
-
-c = np.ones([9, 5, 4, 3])
-np.dot(a, c)
-# %%
