@@ -161,3 +161,4 @@ cython_debug/
 ml-zoomcamp/week-1/housing.csv
 .DS_Store
 ml-zoomcamp/reference/*
+de-zoomcamp-2024/application_default_credentials.json
